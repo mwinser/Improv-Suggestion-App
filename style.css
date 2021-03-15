@@ -20,10 +20,12 @@ html {
   align-items: center;
 }
 #logo {
+  display: block;
   background-image: url("BDT\ Transparent.png");
   background-size: cover;
   width: 20.5rem;
   height: 8rem;
+  cursor: pointer;
 }
 
 #navbar{

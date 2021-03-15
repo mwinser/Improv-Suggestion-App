@@ -1,32 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400&display=swap');
+
 *{
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Londrina Solid', cursive;
   box-sizing: border-box;
 }
 
 #header{
-  padding: 1em;
-  font-size: 1.5rem;
-  text-align: center;
+  padding: 2.5rem;
+  font-size: 3rem;
+  color: white;
+  background-color:rgb(0, 80, 128);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+  background-image: url("BDT\ Transparent.png");
+  background-size: cover;
+  width: 20.5rem;
+  height: 8rem;
 }
 
 #navbar{
-  display: grid;
-  padding: 1em;
-  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2.5em;
   justify-content: space-between;
-  border-bottom: 2px solid #1c1c1c;
+  background-color: rgb(0, 105, 168);
+}
+#nav-title {
+  font-size: 2.5rem;
+  color: white;
+  padding: 0 0 1rem 2rem;
 }
 
 .navItem{
-  background-color: dodgerblue;
+  background-color: rgb(0, 159, 255);
   color: white;
   margin: .5rem;
-  padding: 1em;
-  border-radius: 1em;
-  font-size: .8em;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 3em;
   cursor: pointer;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #main {
@@ -34,16 +52,17 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1em;
-
-  margin: 0;
+  margin-bottom: 15rem;
 }
 
 .btn {
   background-color: white;
-  margin: 1rem 1rem;
-  padding: 1rem;
+  margin: 2rem;
+  padding: 2rem;
+  font-size: 4.5rem;
+  font-weight: 300;
   border-radius: .5rem;
-  border: 1px solid black;
+  border: 3px solid rgba(108, 108, 108, 0.239);
   box-shadow: 2px 2px 3px rgba(0,0,0, .1);
   transition: all .1s;
 
@@ -63,59 +82,25 @@
   justify-content: space-between;
   position: fixed;
   padding: .5em;
+  font-size: 5rem;
   bottom: 0px;
   width: 100%;
-  background-color: white;
+  background-color:rgb(0, 80, 128);
   border-top: 2px solid #1c1c1c;
 }
-
-#shuffle{
+#footer div {
   text-align: center;
   text-transform: uppercase;
-  width: 30vw;
-  background-color: forestgreen;
   margin: .5rem auto;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: .8rem;
   cursor: pointer;
   color: white;
 }
+
+#shuffle{
+  background-color: forestgreen;
+}
 #clear{
-  text-align: center;
-  text-transform: uppercase;
-  width: 30vw;
   background-color: firebrick;
-  margin: .5rem auto;
-  padding: 1rem;
-  border-radius: .8rem;
-  cursor: pointer;
-  color: white
-}
-@media (min-width:550px){
-  #header{
-    font-size: 2em;
-    text-align: left;
-    
-  }
-  .navItem{
-    font-size: 1.1em;
-  }
-  #navbar{
-      grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width:1040px){
-  #navbar{
-      grid-template-columns: repeat(8, 1fr);
-    padding: 1em 2em;
-  }
-  .btn{
-    font-size: 1.2em;
-  }
-  .navItem{
-    font-size: 1.2em;
-  }
-  #footer{
-    font-size: 1.2em;
-  }
 }

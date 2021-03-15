@@ -17,10 +17,9 @@
   </div>
 </div>
 <div id="navbar">
-  <div id="nav-title">Choose suggestion type...</div>
-  <div class="navItem" onClick="newButton('sentenceArray')">
+  <div class="nav-item" onclick="openMenu(this)">
     <div>
-      Sentences
+      Choose suggestion type...
     </div>
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,6 +27,90 @@
       </svg>
     </div>
   </div>
+  <div class="nav-item dropdown hide">
+    <div onclick="generateSuggestions('nouns')">
+      <div>
+        nouns
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('adjectives')">
+      <div>
+        adjectives
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('genres')">
+      <div>
+        genres
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('relationships')">
+      <div>
+        relationships
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('places')">
+      <div>
+        places
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('jobs')">
+      <div>
+        jobs
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('emotions')">
+      <div>
+        emotions
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+    <div onclick="generateSuggestions('sentences')">
+      <div>
+        sentences
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="75px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
 
   </div>
 
@@ -37,8 +120,11 @@
 </div>
 
 <div id="footer">
-  <div id="shuffle" onClick="shuffle()">Shuffle</div>
-  <div id="clear" onClick="clearAll()">Clear</div>
+  <div id="shuffle" onClick="shuffle()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100px"fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    </svg>
+  </div>
 </div>
 
   <script src="./main.js" ></script>

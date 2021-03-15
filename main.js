@@ -9,20 +9,20 @@ const emotions = "angry,annoyed,afraid,awkward,affectionate,anxious,alarmed,awed
 const places = "airport,aircraft hangar,airplane,abbey,antechamber,apartment,apple orchard,appliance store,aquarium,art gallery,artist's studio,ark,army surplus store,army camp,art supply store,armory,advertising office,afterlife,alien world,alley,alpaca farm,amusement park,archeological dig,Apple store,arcade,attic,auditorium,backyard,bachelor party,barn,barnyard,baggage claim,bakery,bank,banquet,barbeque,barber,barracks,bar,basement,bathhouse,battlefield,beach,birthday party,blizzard,boat,bog,bookstore,bowling alley,bridge,burlesque show,cabin,caravan,college campus,campaign headquarters,used car lot,casino,castle,catacombs,cathedral,cemetary,chemistry lab,chess club,chicken farm,church,cinema,clinic,classroom,clothing store,coalmine,coffee shop,coliseum,college dorm,crime scene,computer lab,concert,confectionary,congress,coral reef,countryside,courthouse,courtroom,cattle ranch,creekbed,cruise,dairy farm,damn,dance,desert,detention,disco,doctor's office,doggie daycare,dragon's den,dungeon,escalator,emergency room,exam,eye doctor,forge,frontyard,factory,farm,forest,funeral,game night,gas station,garage,garden,gazebo,glacier,thrift store,greenhouse,gym,hairdresser,harbor,hardware store,hell,heaven,high-rise,highway,hospital,hostel,houseboat,ice cream parlor,iceberg,igloo,inauguration,inn,mental institution,deserted island,jail,jazz club,jewelery store,kayak,kennel,mall kiosk,cat cafe,lab,labor camp,lake house,laundromat,lemonade stand,DMV,criminal lineup,liquor store,hotel lobby,lookout,lunchroom,machine shop,marketplace,marsh,massage parlor,meadow,metro station,mint,missle silo,monastery,moon,motel,museum,record store,nest,newsstand,observatory,opera,operating room,orchestra pit,outfield,parole hearing,passenger van,patio,police car,pawnshop,pentagon,perfume counter,pharmacy,piano recital,pirate ship,playground,police station,prairie,press conference,decontamination chamber,quarantine,principal's office,hotdog stand,prison,halfway house,AA meeting,speakeasy,therapist's office,protest,pyramid,quarry,bingo hall,racetrack,traincar,railway station,ranch,recess,remote outpost,nature reserve,restaurant,work retreat,rifle range,ritual sacrifice,roller rink,river, rowboat,safari,safe room,sailboat,nail salon,saloon,shipyard,shopping mall,shoe store,shrine,shed,skating rink,ski lodge,sporting event,stadium,stripclub,strip mall,starship,studio,submarine,subway platform,subway car,suburb,sunroom,tanning salon,supermarket,sweatshop,public pool,rec center,taco truck,tank,tavern,tattoo parlor,taxicab,temple,theater,theatre,throneroom,tomb,fallout shelter,trailer park,tradepost,veteranarian's office,video store,record store,volcano,coat closet,waterfall,watchtower,wholesale store,wharf,wilderness,office,yacht,dock,opium den,logging camp,plant nursery, nursery,daycare,bog,porch,backseat,bus,palace,fortress,bandcamp,jungle,rainforest,canyon,park bench,tennis court,barge,lighthouse,butcher shop,slaughterhouse,horse corrall,cage,shipping container,boxcar,ski slope,ski lift,carnival,state fair,dog park,animal shelter,oasis,backstage,stakeout,safe house,city council,adult bookstore,bootcamp,donut shop,danceclub,aviary,national park,firetower,homeless shelter,soup kitchen,cat cafe,fancy restaraunt,pantry,sauna,bedroom,conservatory,billiard hall,biker bar,lean-to,overpass,poolside,courtside seats,mountain pass,military checkpoint,summit,basecamp,janitor's closet,space station,blimp,hot-air baloon,treetop"
 
 
-let nounArray = nouns.split(',')
-let adjArray = adjs.split(',')
-let genreArray = genres.split(',')
-let relationArray = relations.split(',')
-let jobArray = jobs.split(',')
-let emotionArray = emotions.split(',')
-let placeArray = places.split(',')
-let sentenceArray = [
-  function (){return random(relationArray) + " discuss "+random(adjArray) + " " + basicPluralize(random(nounArray))},
-  function (){return "A " + random(genreArray) + " story where " + basicPluralize(random(nounArray)) + " are " + random(adjArray)},
-  function (){return "Two " + basicPluralize(random(jobArray)) + " argue about " + basicPluralize(random(nounArray))},
-  function (){return  "A "+ random(genreArray) +" story about a " + random(adjArray) + " " + random(jobArray)},
-  function (){return "A "+ random(emotionArray) + " " + random(jobArray) + " discovers a " + random(adjArray) + " " + random(nounArray)},
-  function (){return "The " + random(placeArray) + " where " + basicPluralize(random(nounArray)) + " are " + random(adjArray)}
+let nounsArray = nouns.split(',')
+let adjectivesArray = adjs.split(',')
+let genresArray = genres.split(',')
+let relationshipsArray = relations.split(',')
+let jobsArray = jobs.split(',')
+let emotionsArray = emotions.split(',')
+let placesArray = places.split(',')
+let sentencesArray = [
+  function (){return random(relationshipsArray) + " discuss "+random(adjectivesArray) + " " + basicPluralize(random(nounsArray)) + "."},
+  function (){return "A " + random(genresArray) + " story where " + basicPluralize(random(nounsArray)) + " are " + random(adjectivesArray) + "."},
+  function (){return "Two " + basicPluralize(random(jobsArray)) + " argue about " + basicPluralize(random(nounsArray)) + "."},
+  function (){return  "A "+ random(genresArray) +" story about a " + random(adjectivesArray) + " " + random(jobsArray) + "."},
+  function (){return "A "+ random(emotionsArray) + " " + random(jobsArray) + " discovers a " + random(adjectivesArray) + " " + random(nounsArray) + "."},
+  function (){return "The " + random(placesArray) + " where " + basicPluralize(random(nounsArray)) + " are " + random(adjectivesArray) + "."}
 ]
 
 function newSuggestion(obj,word){
@@ -30,7 +30,7 @@ function newSuggestion(obj,word){
 }
 
 function random(type){  
-  if(type == sentenceArray){
+  if(type == sentencesArray){
     return type[Math.floor(Math.random()*type.length)]()
   }
     return type[Math.floor(Math.random()*type.length)]
@@ -39,13 +39,32 @@ function random(type){
 }
 
 function newButton(word){
-  let button = document.createElement('div')
-  button.className = 'btn'
-  button.setAttribute("onclick", "newSuggestion(this,"+word+")")
-  let main = document.getElementById('main')
-  main.appendChild(button)
-  button.click()
+  for (let i=0;i<4;i++){
+    let button = document.createElement('div')
+    button.className = 'btn'
+    button.setAttribute("onclick", "newSuggestion(this,"+word+")")
+    let main = document.getElementById('main')
+    main.appendChild(button)
+    button.click()
+  }
 }
+function openMenu(obj){
+  let navItems = document.getElementsByClassName("nav-item")
+  navItems[0].classList.add("hide")
+  navItems[1].classList.remove("hide")
+}
+
+function generateSuggestions(word){
+  let navItems = document.getElementsByClassName("nav-item")
+  navItems[1].classList.add("hide")
+  navItems[0].classList.remove("hide")
+  navItems[0].firstElementChild.innerHTML = word
+  clearAll()
+  newButton(word+"Array")
+}
+
+
+
 
 function shuffle(){
   let buttons = document.querySelectorAll('.btn')

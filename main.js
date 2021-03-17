@@ -115,8 +115,7 @@ window.onclick = (event)=>closeInfoMenu(event)
 //listen to shake event
 var shakeEvent = new Shake({threshold: 15});
 shakeEvent.start();
-window.addEventListener('shake', shuffle()
-, false);
+window.addEventListener('shake', shuffle(), false);
 
 //stop listening
 function stopShake(){

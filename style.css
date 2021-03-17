@@ -3,6 +3,7 @@
 html {
   font-size: 6px;
 }
+
 *{
   margin: 0;
   padding: 0;
@@ -62,7 +63,7 @@ html {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 0;
-  animation: unfurl ease-in .6s;
+  animation: unfurl ease-in .5s;
 
 }
 .dropdown > div {
@@ -111,6 +112,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   position: fixed;
+  width: 100vw;
   padding: .5em;
   font-size: 5rem;
   bottom: 0;
@@ -118,7 +120,7 @@ html {
 
 }
 #footer div {
-  margin: .5rem auto;
+  margin: .5rem;
   padding: 2rem;
   border-radius: 50%;
   cursor: pointer;
@@ -133,6 +135,48 @@ html {
 #shuffle{
   background-color: forestgreen;
 }
+#info {
+  background-color: rgb(0, 159, 255)
+}
+
+.info-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.24);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#info-box {
+  position: relative;
+  background-color: white;
+  max-width: 80%;
+  padding: 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+  animation: slideFromLeft ease-out .6s;
+}
+#info-box h2{
+  margin-bottom: 2rem;
+}
+#bdt-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#bdt-icons svg{
+  width: 6rem;
+  fill: gray;
+}
+
+.show-info {
+  display:flex;
+}
 
 @keyframes unfurl {
   from {
@@ -142,13 +186,10 @@ html {
     clip-path: inset(0 0 0 0)
   }
  }
- @keyframes furl {
-  from {
-    clip-path: inset(0 0 0 0)
-  }
-  to {
-    clip-path: inset(0 0 85% 0)
-  }
+ @keyframes slideFromLeft {
+  0% {left: -100%}
+  90%{left: 2%}
+  100%{left: 0}
  }
 
 @media (min-width: 800px) {

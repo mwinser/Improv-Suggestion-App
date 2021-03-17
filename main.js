@@ -46,7 +46,7 @@ function newButton(word){
     button.click()
   }
 }
-function openMenu(obj){
+function openSuggestionMenu(obj){
   let navItems = document.getElementsByClassName("nav-item")
   navItems[0].classList.add("hide")
   navItems[1].classList.remove("hide")
@@ -60,9 +60,16 @@ function generateSuggestions(word){
   clearAll()
   newButton(word+"Array")
 }
+  let infoMenu = document.getElementById("info-menu")
 
-
-
+function openInfoMenu () {
+  infoMenu.classList.add("show-info")
+}
+function closeInfoMenu (event) {
+  if (event.target === infoMenu){
+    infoMenu.classList.remove("show-info")
+  }
+}
 
 function shuffle(){
   let buttons = document.querySelectorAll('.btn')
@@ -97,3 +104,5 @@ function basicPluralize(input){
   }
   
 }
+
+window.onclick = (event)=>closeInfoMenu(event)

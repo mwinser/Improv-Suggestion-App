@@ -68,6 +68,8 @@ function openInfoMenu () {
 function closeInfoMenu (event) {
   if (event.target === infoMenu){
     infoMenu.classList.remove("show-info")
+  } else if (event === 'yes'){
+    infoMenu.classList.remove("show-info")
   }
 }
 

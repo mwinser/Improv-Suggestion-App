@@ -155,12 +155,20 @@ html {
   background-color: white;
   max-width: 80%;
   padding: 3rem;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 300;
   animation: slideFromLeft ease-out .6s;
 }
-#info-box h2{
+#info-header{
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#info-header svg {
+  width: 4rem;
+  cursor: pointer;
 }
 #bdt-icons {
   margin-top: 2rem;

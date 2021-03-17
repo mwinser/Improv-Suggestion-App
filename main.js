@@ -56,7 +56,7 @@ function generateSuggestions(word){
   let navItems = document.getElementsByClassName("nav-item")
   navItems[1].classList.add("hide")
   navItems[0].classList.remove("hide")
-  navItems[0].firstElementChild.innerHTML = word
+  navItems[0].firstElementChild.innerHTML = capitalize(word)
   clearAll()
   newButton(word+"Array")
 }

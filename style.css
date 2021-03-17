@@ -155,7 +155,7 @@ html {
   background-color: white;
   max-width: 80%;
   padding: 3rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 300;
   animation: slideFromLeft ease-out .6s;
 }
@@ -176,6 +176,12 @@ html {
 
 .show-info {
   display:flex;
+}
+
+p {
+  text-indent: 10%;
+  padding-bottom: .5rem;
+  max-width: 500px;
 }
 
 @keyframes unfurl {
@@ -210,6 +216,9 @@ html {
   .nav-item svg {
     width: 2rem;
   }
+  #main {
+    align-items: center;
+  }
   .btn {
     font-size: 2rem;
     margin: 1rem;
@@ -217,5 +226,8 @@ html {
   }
   #footer svg {
     width: 4rem;
+  }
+  #info-box {
+    font-size: 2rem;
   }
 }

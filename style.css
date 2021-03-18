@@ -10,7 +10,19 @@ html {
   font-family: 'Londrina Solid', cursive;
   box-sizing: border-box;
 }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
 
+.skip-link:focus {
+  top: 0;
+}
 #header{
   padding: 2.5rem;
   font-size: 3rem;
@@ -39,7 +51,7 @@ html {
 }
 
 .nav-item{
-  background-color: rgb(0, 159, 255);
+  background-color: rgb(0, 118, 192);
   color: white;
   width: calc(100vw - 3rem);
   margin: 1.5rem;
@@ -74,7 +86,7 @@ html {
   padding: 0 3rem;
 }
 .dropdown > div:hover {
-  background-color: rgb(108, 199, 255);
+  background-color: rgb(65, 160, 219);
 }
 .hide {
   display: none;

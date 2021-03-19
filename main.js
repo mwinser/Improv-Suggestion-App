@@ -116,9 +116,11 @@ function basicPluralize(input){
 
 window.onclick = (event)=>closeInfoMenu(event)
 
-//wait for shake.js to load
+//wait for page to load
 setTimeout(()=>{
-//listen to shake event
+//add font
+document.getRootNode().head.children[4].disabled = false
+  //listen to shake event
 var shakeEvent = new Shake({threshold: 15});
 shakeEvent.start();
 window.addEventListener('shake', ()=>{console.log("shake detected");shuffle()}, false);
@@ -126,4 +128,4 @@ window.addEventListener('shake', ()=>{console.log("shake detected");shuffle()}, 
 //check if shake is supported or not.
 if(!("ondevicemotion" in window)){alert("Not Supported");}
 
-},3000)
+},1000)

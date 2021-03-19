@@ -1,14 +1,3 @@
-@font-face {
-  font-family: "Londrina Solid Light";
-  src: url("LondrinaSolid-Light.ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Londrina Solid Regular";
-  src: url("LondrinaSolid-Regular.ttf");
-  font-display: swap;
-}
 
 html {
   font-size: 6px;

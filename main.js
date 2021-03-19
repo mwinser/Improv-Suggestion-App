@@ -118,8 +118,6 @@ window.onclick = (event)=>closeInfoMenu(event)
 
 //wait for page to load
 setTimeout(()=>{
-//add font
-document.getRootNode().head.children[4].disabled = false
   //listen to shake event
 var shakeEvent = new Shake({threshold: 15});
 shakeEvent.start();

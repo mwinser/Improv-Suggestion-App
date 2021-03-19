@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Londrina Solid Light";
+  src: url("LondrinaSolid-Light.ttf");
+}
+
+@font-face {
+  font-family: "Londrina Solid Regular";
+  src: url("LondrinaSolid-Regular.ttf");
+}
 
 html {
   font-size: 6px;
@@ -6,7 +15,7 @@ html {
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Londrina Solid', cursive;
+  font-family: 'Londrina Solid Regular', cursive;
   box-sizing: border-box;
 }
 .skip-link {
@@ -102,7 +111,7 @@ html {
   margin: 2rem;
   padding: 2rem;
   font-size: 3.8rem;
-  font-weight: 300;
+  font-family: 'Londrina Solid Light', cursive;
   border-radius: .5rem;
   border: 3px solid rgba(108, 108, 108, 0.239);
   box-shadow: 2px 2px 3px rgba(0,0,0, .1);

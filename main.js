@@ -44,7 +44,7 @@ function newButton(word){
     button.className = 'btn'
     share.classList.add('share')
     share.classList.add('hide')
-    share.innerHTML = "Tweet This"
+    share.innerHTML = "Tweet"
     share.href = "https://twitter.com/intent/tweet?text=HA! Just got this as a random suggestion:%0D%0D'"+content+"'%0D%0D&url=https://bdt-improv.netlify.app&via=BlueDoorTheatre&hashtags=improv&related=BlueDoorTheatre,winsaurus"
     button.setAttribute("onclick", 'this.lastChild.classList.toggle("hide")')
     button.appendChild(text)

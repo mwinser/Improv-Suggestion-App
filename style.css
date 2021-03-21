@@ -1,6 +1,7 @@
 
-html {
+html, body{
   font-size: 6px;
+  height: 100vh;
 }
 
 *{
@@ -47,6 +48,7 @@ html {
   padding: 6em;
   background-color: rgb(0, 105, 168);
   position: relative;
+  width: 100vw;
 }
 
 .nav-item{
@@ -149,7 +151,9 @@ html {
 #info {
   background-color: rgb(0, 159, 255)
 }
-
+#content {
+  display: flex;
+}
 .info-menu {
   position: absolute;
   top: 0;
@@ -160,6 +164,7 @@ html {
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 #info-box {
   position: relative;
@@ -221,31 +226,99 @@ p {
     font-size: 12px;
   }
   #header {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
+    height: 11rem;
   } 
+  #content {
+    height: calc(100vh - 11rem);
+  }
+
   #navbar {
-    padding: 3.5rem;
+    padding: .5rem 0;
+    width: 65vw;
   }
   .nav-item {
-    width: 50%;
-    font-size: 2rem;
-    padding: .75rem 1.5rem
+    width: 95%;
+    z-index: 1;
+    display: flex;
+    padding: .5rem;
+    flex-direction: row;
+    font-size: 2.4rem;
+    animation: unset;
+    position: unset;
+    flex-wrap: wrap;
   }
+  .nav-item > div {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    padding: 0.5rem .9rem;
+    border-radius: 1rem;
+    justify-content: center;
+  }
+  .navitem > div:hover {
+    background-color: rgb(65, 160, 219);
+  }
+
   .nav-item svg {
-    width: 2rem;
+    width: 1.5rem;
   }
+
+
+
   #main {
     align-items: center;
   }
   .btn {
-    font-size: 2rem;
-    margin: 1rem;
-    padding: 1rem;
+    font-size: 2.5rem;
+    margin: 2rem;
+    padding: 2rem;
   }
   #footer svg {
     width: 4rem;
   }
+
   #info-box {
     font-size: 2rem;
+  }
+  #footer {
+    justify-content: end;
+  }
+  .info-menu {
+    position: relative;
+    top: unset;
+    left: unset;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 35%;
+    height: unset;
+    border-right: 2px solid gray;
+    background-color: unset;
+  }
+  #info-box {
+    position: relative;
+    background-color: white;
+    max-width: unset;
+    padding: 3rem 3rem;
+    font-size: 1.8rem;
+    font-family: 'Londrina Solid Light', cursive;
+    animation: unset;
+  }
+  #footer div:first-child {
+      display: none;  
+    }
+
+  #info-header svg {
+    display: none;
+  }
+  #bdt-icons svg {
+    width: 3rem;
+  }
+  #right-panel {
+    width: 65%;
+  }
+  #typeMenu {
+    display: none;
   }
 }

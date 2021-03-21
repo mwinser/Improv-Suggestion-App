@@ -109,8 +109,14 @@ html, body{
   border: 3px solid rgba(108, 108, 108, 0.239);
   box-shadow: 2px 2px 3px rgba(0,0,0, .1);
   transition: all .1s;
-
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn a {
+  font-size: .8em;
+  padding-top: 1em;
 }
 .btn:hover{
   box-shadow: 0px 2px 3px rgba(0,0,0, .3);
@@ -283,6 +289,7 @@ p {
   }
   #footer {
     justify-content: end;
+    width: unset;
   }
   .info-menu {
     position: relative;

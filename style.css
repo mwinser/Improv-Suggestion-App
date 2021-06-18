@@ -127,13 +127,14 @@ html, body{
 }
 .share {
   margin-top: 1rem;
-  padding: .5rem;
+  padding: 1.5rem;
   background-color: #1b95e0;
   color: #fff;
   border-radius: 3px;
   font-family: Tahoma, sans-serif ;
   font-size: .5rem;
   cursor: pointer;
+  width: fit-content;
 }
 
 #footer{
@@ -340,5 +341,8 @@ p {
   }
   #typeMenu {
     display: none;
+  }
+  .share {
+    padding: 1rem;
   }
 }

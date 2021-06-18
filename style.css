@@ -112,7 +112,6 @@ html, body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .btn a {
   font-size: .5em;
@@ -291,6 +290,7 @@ p {
     font-size: 2.5rem;
     margin: 1rem;
     padding: 2rem;
+    align-items: center;
   }
   #footer svg {
     width: 4rem;

@@ -221,6 +221,7 @@ p {
   text-indent: 10%;
   padding-bottom: .5rem;
   max-width: 500px;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 @keyframes unfurl {

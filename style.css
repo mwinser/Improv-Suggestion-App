@@ -96,7 +96,7 @@ html, body{
   margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 3em;
 }
 
 .btn {
@@ -193,7 +193,7 @@ html, body{
   animation: slideFromLeft ease-out .6s;
 }
 #info-header{
-  margin-bottom: 2rem;
+  margin: 2rem 0 3rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,7 +204,7 @@ html, body{
   cursor: pointer;
 }
 #bdt-icons {
-  margin-top: 2rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -222,6 +222,7 @@ p {
   text-indent: 10%;
   padding-bottom: .5rem;
   max-width: 500px;
+  line-height: 135%;
   font-family: 'Trebuchet MS', sans-serif;
 }
 
@@ -344,5 +345,6 @@ p {
   }
   .share {
     padding: 1rem;
+    margin-top: 1.5rem;
   }
 }
